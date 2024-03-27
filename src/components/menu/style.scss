@@ -1,0 +1,70 @@
+@import "../../assets/styles/index.scss";
+
+//media for tablet
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400vh;
+    box-sizing: border-box;
+    background-color: $c-dark;
+    opacity: 0;
+    pointer-events: none;
+
+    &:target {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &:has(.menu:target) {
+        overflow: hidden;
+    }
+
+    &__content {
+        margin: 20px;
+
+        @include onTablet {
+            margin: 27px;
+        }
+    }
+
+    &__nav {
+        margin-top: 45px;
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        margin-bottom: 40px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #828282;
+            position: absolute;
+            bottom: -10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @extend %text_3;
+        letter-spacing: 0;
+        color: $c-warmGray;
+        text-decoration: none;
+    }
+}
+
+.icon-close__link {
+    display: block;
+    width: 15px;
+    height: 15px;
+    color: $c-warmGray;
+    background: url(../../assets/icons/close.svg) no-repeat center;
+  }

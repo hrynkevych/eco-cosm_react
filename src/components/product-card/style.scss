@@ -1,0 +1,73 @@
+@import "../../assets/styles/index.scss";
+
+// media for tablet 
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    &__title {
+        @extend %h5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    &__price {
+        @extend %text_2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    &__photo {
+        width: 280px;
+        height: 248px;
+        display: block;
+        margin-bottom: 30px;
+        // add hover effect;
+    }
+
+    &__img {
+        object-fit: cover;
+    }
+
+    &__button {
+        @extend %button;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 280px;
+        height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        background: $c-dark;
+        color: $c-cloudWhite;
+        text-decoration: none;
+        border: 1px solid $c-dark;
+        transition: $duration;
+
+        &:hover {
+            color: $c-dark;
+            background: $c-warmGray;
+            cursor: pointer;
+        }
+    }
+
+    &__description {
+        @extend %small_text;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}

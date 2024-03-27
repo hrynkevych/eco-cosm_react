@@ -1,0 +1,33 @@
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin onBigScreen {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin grid {
+  --column: 2;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--column), 1fr);
+
+  @include onTablet {
+    --column: 6;
+    column-gap: 30px;
+  }
+
+  @include onDesktop() {
+    --column: 12;
+  }
+}

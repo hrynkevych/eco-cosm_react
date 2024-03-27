@@ -1,0 +1,29 @@
+@import "./assets/styles/index.scss";
+
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.page__body {
+  background-color: $c-warmGray;
+}
+
+.vertical {
+  &____text {
+      
+  }
+
+  &____img {
+
+  }
+}
